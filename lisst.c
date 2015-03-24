@@ -39,3 +39,15 @@ else                            //if the linked list is not empty
         }
 }
 
+void prettyPrint()      //traverse the list starting at head and print values.
+{
+        struct NUMBER_NODE *p = head;
+        printf("the linked list now contains:\n");
+        while(p != NULL)
+        {
+                printf ("%d \n", p->value);
+                p = p->next;
+        }
+}
+
+
