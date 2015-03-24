@@ -19,4 +19,23 @@ void add(int a)
                 head->next = NULL;
                 return;
         }
+else                            //if the linked list is not empty
+        {
+
+        struct NUMBER_NODE *freeSpot;
+        struct NUMBER_NODE *newNode;
+        freeSpot = head;
+
+        while (freeSpot->next != NULL) //traverse the linked list until you find the tail
+        {
+                freeSpot = freeSpot->next;
+        }
+
+        newNode = (struct NUMBER_NODE *)malloc(sizeof(struct NUMBER_NODE)); //create new node, insert the value, make this node point at NULL and have the prev  node point at it.
+        newNode->value = a;
+        newNode->next = NULL;
+        freeSpot->next = newNode;
+        return;
+        }
+}
 
